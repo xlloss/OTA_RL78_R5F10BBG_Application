@@ -49,8 +49,10 @@ Pragma directive
 
 #ifdef OLDER_VER
 __far const unsigned long version = 0x01010101;
+#define VERSION_NUM "01010101"
 #else
-__far const unsigned long version = 0x01020305;
+__far const unsigned long version = 0x01020308;
+#define VERSION_NUM "0x01020308"
 #endif
 //__far const unsigned long version = 0x02020202;
 #pragma section
@@ -80,7 +82,7 @@ void R_MAIN_UserInit(void);
 #pragma section text .BOOT
 void main(void)
 {
-    unsigned char ver_num[10] = "0x01020305";
+    unsigned char ver_num[10] = VERSION_NUM;
     e_packet_handle_t packet_type;
     R_MAIN_UserInit();
     /* Start user code. Do not edit comment generated here */
