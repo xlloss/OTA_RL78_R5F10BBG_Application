@@ -65,7 +65,7 @@ void R_SAU0_Create(void)
     NOP();
     NOP();
     NOP();
-    SPS0 = _0004_SAU_CK00_FCLK_4 | _0040_SAU_CK01_FCLK_4;
+    SPS0 = _0002_SAU_CK00_FCLK_2 | _0020_SAU_CK01_FCLK_2;
     R_UART0_Create();
 }
 
