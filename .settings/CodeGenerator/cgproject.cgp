@@ -76,12 +76,12 @@
     <ADPCForPort8 Name="ADPCForPort8" Value="255" Comment="ADPCForPort8" />
     <ADPCForPort9 Name="ADPCForPort9" Value="255" Comment="ADPCForPort9" />
     <ADPCForKey Name="ADPCForKey" Value="255" Comment="ADPCForKey" />
-    <OnChipDebugTraceDTC Name="GTraceRam" Text="2" Trigger="ocdtraceram">
+    <OnChipDebugTraceDTC Name="GTraceRam" Text="1" Trigger="ocdtraceram">
       <Effect>
         <DTC />
       </Effect>
     </OnChipDebugTraceDTC>
-    <OnChipDebugTrace Name="GTrace" Text="2" />
+    <OnChipDebugTrace Name="GTrace" Text="1" />
     <OnChipDebugHotPlugDTC Name="GHotPlugRam" Text="2" Trigger="ocdhotplugram">
       <Effect>
         <DTC />
@@ -227,9 +227,9 @@
     <SecurityId Name="GIValue" Text="00000000000000000000" />
     <LinkDirectiveFile Name="D0" Text="lk.dr" />
     <OnChipDebugOptionBytes Name="GO" Text="1" />
-    <OnChipDebugOptionBytesValue Name="GOValue" Text="04" />
-    <StartAddressOfOnChipDebugOptionBytes Name="GOStart" Text="1FE00" />
-    <SizeOfOnChipDebugOptionBytesArea Name="GOSizeValue" Text="512" />
+    <OnChipDebugOptionBytesValue Name="GOValue" Text="84" />
+    <StartAddressOfOnChipDebugOptionBytes Name="GOStart" Text="1FD00" />
+    <SizeOfOnChipDebugOptionBytesArea Name="GOSizeValue" Text="768" />
     <UserOptionBytes Name="GB" Text="1" />
     <UserOptionBytesValue Name="GBValue" Text="FFFFF8" />
     <RAMStartAddress Chip="R5F10AGG,R5F10ALG,R5F10AMG,R5F10BAG,R5F10BBG,R5F10BGG,R5F10BLG,R5F10BMG" Name="RAMStartAddress" Fixed="" Text="000FDF00" />
@@ -256,11 +256,11 @@
     <fCLKSource Name="fCLKSource" Text="fIH" />
     <UseFDL Name="UseFDL" Text="no" />
     <DataFlash Name="DataFlash" Text="0" />
-    <OCDROM Name="OCDROM" Text="Unused" />
-    <OCDROM_Address Name="OCDROM_Address" Text="0001FE00" />
-    <OCDROM_Length Name="OCDROM_Length" Text="512" />
-    <HasRRMRam Name="HasRRMRam" Text="" />
-    <HasTraceRam Name="HasTraceRam" Text="" />
+    <OCDROM Name="OCDROM" Text="Used" />
+    <OCDROM_Address Name="OCDROM_Address" Text="0001FD00" />
+    <OCDROM_Length Name="OCDROM_Length" Text="768" />
+    <HasRRMRam Name="HasRRMRam" Text="1FD00" />
+    <HasTraceRam Name="HasTraceRam" Text="FE300" />
     <HasHotRam Name="HasHotRam" Text="" />
     <PrjVersion Name="PrjVersion" Text="1.2.0.1" />
     <ProductVersion Name="ProductVersion" Text="2.23.00.01" />
@@ -291,7 +291,7 @@
           <P34 Name="P34/AVREFM/ANI01" AltFunc="" Point="I/O" />
         </Port3>
         <Port4 Chip="RL78F13_30pin,RL78F13_32pin,RL78F13_48pin" Pullup="true">
-          <P40 Name="P40/TOOL0" AltFunc="" Point="I/O" />
+          <P40 Name="P40/TOOL0" AltFunc="TOOL0" Point="I/O" />
           <P41 Name="P41/TI10/TO10/TRJIO0/VCOUT0/SNZOUT2" AltFunc="" Point="I/O" />
         </Port4>
         <Port6 Chip="RL78F13_32pin,RL78F13_48pin,RL78F13_64pin" Pullup="true">
@@ -1301,25 +1301,30 @@
     <TAG>
       <GlobleUserTag>
         <clock_option Name="clock_option" Value="F8" />
-        <cg_security6 Name="cg_security6" Value="00" />
+        <cg_ocd_trace Name="cg_ocd_trace" Value="FE300" />
+        <cg_security5 Name="cg_security5" Value="00" />
         <wdt_option Name="wdt_option" Value="FF" />
-        <cg_security9 Name="cg_security9" Value="00" />
+        <cg_security8 Name="cg_security8" Value="00" />
         <cg_security2 Name="cg_security2" Value="00" />
-        <lvi_option Name="lvi_option" Value="FF" />
         <pior_value4 Name="pior_value4" Value="00" />
         <cg_security1 Name="cg_security1" Value="00" />
+        <cg_security9 Name="cg_security9" Value="00" />
+        <rrm Name="rrm" Value="1FD00" />
         <pior_value7 Name="pior_value7" Value="00" />
-        <cg_security5 Name="cg_security5" Value="00" />
+        <cg_security6 Name="cg_security6" Value="00" />
         <cg_crc_area Name="cg_crc_area" Value="00" />
-        <cg_security8 Name="cg_security8" Value="00" />
         <cg_iawctl_value Name="cg_iawctl_value" Value="00" />
+        <cg_ocd_trace_size Name="cg_ocd_trace_size" Value="512" />
         <cg_security0 Name="cg_security0" Value="00" />
-        <ocdstart Name="ocdstart" Value="1FE00" />
+        <cg_security7 Name="cg_security7" Value="00" />
+        <ocdstart Name="ocdstart" Value="1FD00" />
         <cg_security3 Name="cg_security3" Value="00" />
         <cg_security4 Name="cg_security4" Value="00" />
-        <cg_option Name="cg_option" Value="04" />
-        <cg_security7 Name="cg_security7" Value="00" />
         <pior_value5 Name="pior_value5" Value="01" />
+        <cg_ocd_ram_size Name="cg_ocd_ram_size" Value="512" />
+        <cg_onchip Name="cg_onchip" Value="" />
+        <cg_option Name="cg_option" Value="84" />
+        <lvi_option Name="lvi_option" Value="FF" />
       </GlobleUserTag>
     </TAG>
   </DIR>
@@ -1395,8 +1400,8 @@
       <setting name="TRD_FREQUENCY_VALUE" value="0" />
       <setting name="FSL_FREQUENCY_VALUE" value="0" />
       <setting name="RTC_IT_CLOCK" value="0" />
-      <setting name="OCD_UNUSED" value="true" />
-      <setting name="OCD_USED" value="false" />
+      <setting name="OCD_UNUSED" value="false" />
+      <setting name="OCD_USED" value="true" />
       <setting name="RRM_UNUSED" value="false" />
       <setting name="RRM_USED" value="true" />
       <setting name="TRACE_UNUSED" value="false" />
@@ -1436,8 +1441,8 @@
       <setting name="DataFlash" value="unused" />
       <setting name="ProgramFlash" value="unused" />
       <setting name="Monitor" value="unused" />
-      <setting name="StartStop" value="unused" />
-      <setting name="Emulator" value="E1" />
+      <setting name="StartStop" value="used" />
+      <setting name="Emulator" value="E2L" />
     </CGC>
   </SETTING>
 </RL78F13>
