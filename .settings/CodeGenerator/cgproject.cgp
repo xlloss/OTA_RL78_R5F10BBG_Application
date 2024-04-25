@@ -231,7 +231,7 @@
     <StartAddressOfOnChipDebugOptionBytes Name="GOStart" Text="1FD00" />
     <SizeOfOnChipDebugOptionBytesArea Name="GOSizeValue" Text="768" />
     <UserOptionBytes Name="GB" Text="1" />
-    <UserOptionBytesValue Name="GBValue" Text="FFFFF8" />
+    <UserOptionBytesValue Name="GBValue" Text="E9FFF8" />
     <RAMStartAddress Chip="R5F10AGG,R5F10ALG,R5F10AMG,R5F10BAG,R5F10BBG,R5F10BGG,R5F10BLG,R5F10BMG" Name="RAMStartAddress" Fixed="" Text="000FDF00" />
     <RAMEndAddress Name="RAMEndAddress" Fixed="" Text="000FFEFF" />
     <ROMEndAddress Chip="R5F10AGG,R5F10ALG,R5F10AMG,R5F10BAG,R5F10BBG,R5F10BGG,R5F10BLG,R5F10BMG" Name="ROMEndAddress" Fixed="" Text="0001FFFF" />
@@ -613,7 +613,7 @@
         <INTRTC InUse="0" ISR="r_rtc_interrupt" />
       </RTC>
       <WDT>
-        <INTWDTI InUse="1" ISR="r_wdt_interrupt" />
+        <INTWDTI InUse="0" ISR="r_wdt_interrupt" />
       </WDT>
       <LVD>
         <INTLVI InUse="0" ISR="r_lvd_interrupt" IsDMATrigger="true" />
@@ -1128,17 +1128,17 @@
         <r_cg_timer.h UserName="" LibName=".h" InUse="" />
       </TAU>
       <WDT>
-        <r_cg_wdt.c UserName="" LibName=".c" InUse="1">
+        <r_cg_wdt.c UserName="" LibName=".c" InUse="0">
           <Type R_WDT_Create="void R_WDT_Create(void)" R_WDT_Restart="void R_WDT_Restart(void)" />
-          <R_WDT_Create UserName="" LibName="R_WDT_Create" InUse="1" Init="1" InitMode="" />
-          <R_WDT_Restart UserName="" LibName="R_WDT_Restart" InUse="1" />
+          <R_WDT_Create UserName="" LibName="R_WDT_Create" InUse="0" Init="1" InitMode="" />
+          <R_WDT_Restart UserName="" LibName="R_WDT_Restart" InUse="0" />
         </r_cg_wdt.c>
-        <r_cg_wdt_user.c UserName="" LibName="_user.c" InUse="1">
+        <r_cg_wdt_user.c UserName="" LibName="_user.c" InUse="0">
           <Type R_WDT_Create_UserInit="void R_WDT_Create_UserInit(void)" r_wdt_interrupt="__interrupt static void r_wdt_interrupt(void)" />
-          <R_WDT_Create_UserInit UserName="" LibName="R_WDT_Create_UserInit" InUse="" />
-          <r_wdt_interrupt UserName="" INTHandle="" LibName="r_wdt_interrupt" InUse="1" />
+          <R_WDT_Create_UserInit UserName="" LibName="R_WDT_Create_UserInit" InUse="0" />
+          <r_wdt_interrupt UserName="" INTHandle="" LibName="r_wdt_interrupt" InUse="0" />
         </r_cg_wdt_user.c>
-        <r_cg_wdt.h UserName="" LibName=".h" InUse="1" />
+        <r_cg_wdt.h UserName="" LibName=".h" InUse="0" />
       </WDT>
       <RTC>
         <r_cg_rtc.c UserName="" LibName=".c" InUse="">
@@ -1303,7 +1303,7 @@
         <clock_option Name="clock_option" Value="F8" />
         <cg_ocd_trace Name="cg_ocd_trace" Value="FE300" />
         <cg_security5 Name="cg_security5" Value="00" />
-        <wdt_option Name="wdt_option" Value="FF" />
+        <wdt_option Name="wdt_option" Value="E9" />
         <cg_security8 Name="cg_security8" Value="00" />
         <cg_security2 Name="cg_security2" Value="00" />
         <pior_value4 Name="pior_value4" Value="00" />
@@ -1360,8 +1360,8 @@
       <TMRD0 SetFlag="" MacroName="TMRD" Channel="0" />
       <TMRD1 SetFlag="" MacroName="TMRD" Channel="1" />
     </TAU>
-    <WDT Prepared="true" SetFlag="true" HelpID="watchdogtimer" NeedRefresh="False">
-      <WDT SetFlag="true" MacroName="WDT" />
+    <WDT Prepared="true" SetFlag="False" HelpID="watchdogtimer" NeedRefresh="False">
+      <WDT SetFlag="False" MacroName="WDT" />
     </WDT>
     <RTC SetFlag="" HelpID="rtc" NeedRefresh="False">
       <RTC MacroName="RTC" />
@@ -1551,5 +1551,15 @@
       <setting name="MODULE_UNUSE" value="true" />
       <setting name="SINGLE_MASTER_USED" value="false" />
     </IICA0>
+    <WDT>
+      <setting name="WDT_MODULE_USED" value="false" />
+      <setting name="WDT_MODULE_UNUSE" value="true" />
+      <setting name="WDT_OVERFLOW_TIME" value="4" />
+      <setting name="WDT_WINDOW_OPEN_TIME" value="2" />
+      <setting name="WDT_HALT_STOP_OPERATION_ENABLE" value="true" />
+      <setting name="WDT_HALT_STOP_OPERATION_STOP" value="false" />
+      <setting name="WDT_INTERRUPT_USED" value="true" />
+      <setting name="WDT_INTERRUPT_PRIORITY" value="3" />
+    </WDT>
   </SETTING>
 </RL78F13>
