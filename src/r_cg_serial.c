@@ -50,6 +50,8 @@ volatile uint8_t * gp_uart0_rx_address;        /* uart0 receive buffer address *
 volatile uint16_t  g_uart0_rx_count;           /* uart0 receive data number */
 volatile uint16_t  g_uart0_rx_length;          /* uart0 receive data length */
 /* Start user code for global. Do not edit comment generated here */
+volatile uint8_t uart_rcv_done = 0;
+volatile uint8_t uart_snd_flag = 0;
 /* End user code. Do not edit comment generated here */
 
 /***********************************************************************************************************************
@@ -166,6 +168,11 @@ MD_STATUS R_UART0_Receive(uint8_t * const rx_buf, uint16_t rx_num)
         gp_uart0_rx_address = rx_buf;
     }
 
+    if(status == MD_OK)
+    {
+        uart_rcv_done = 0;
+    }
+
     return (status);
 }
 
@@ -196,6 +203,11 @@ MD_STATUS R_UART0_Send(uint8_t * const tx_buf, uint16_t tx_num)
         gp_uart0_tx_address++;
         g_uart0_tx_count--;
         STMK0 = 0U;    /* enable INTST0 interrupt */
+    }
+
+    if(status == MD_OK)
+    {
+        uart_snd_flag = 0;
     }
 
     return (status);
