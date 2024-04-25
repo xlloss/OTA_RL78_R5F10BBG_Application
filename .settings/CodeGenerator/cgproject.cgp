@@ -192,7 +192,7 @@
     <PIOR44Value Name="PIOR44Value" Text="0" />
     <PIOR45Value Name="PIOR45Value" Text="0" />
     <PIOR46Value Name="PIOR46Value" Text="0" />
-    <PIOR50Value Name="PIOR50Value" Text="0" />
+    <PIOR50Value Name="PIOR50Value" Text="1" />
     <PIOR52Value Name="PIOR52Value" Text="0" />
     <PIOR53Value Name="PIOR53Value" Text="0" />
     <PIOR60Value Name="PIOR60Value" Text="0" />
@@ -362,19 +362,13 @@
         <SAU0>
           <UART0>
             <RXD0 Chip="RL78F13_32pin,RL78F13_48pin,RL78F13_64pin,RL78F13_80pin" PIOR40="0" Port="P16" Point="I" />
-            <RXD0 Chip="RL78F13_32pin,RL78F13_48pin,RL78F13_64pin,RL78F13_80pin" PIOR40="1" Port="P61" Point="I" />
             <TXD0 Chip="RL78F13_32pin,RL78F13_48pin,RL78F13_64pin,RL78F13_80pin" PIOR40="0" Port="P15" Point="O" />
-            <TXD0 Chip="RL78F13_32pin,RL78F13_48pin,RL78F13_64pin,RL78F13_80pin" PIOR40="1" Port="P62" Point="O" />
           </UART0>
           <CSI00>
             <SO00 Chip="RL78F13_32pin,RL78F13_48pin,RL78F13_64pin,RL78F13_80pin" PIOR40="0" Port="P15" Point="O" />
-            <SO00 Chip="RL78F13_32pin,RL78F13_48pin,RL78F13_64pin,RL78F13_80pin" PIOR40="1" Port="P62" Point="O" />
             <SI00 Chip="RL78F13_32pin,RL78F13_48pin,RL78F13_64pin,RL78F13_80pin" PIOR40="0" Port="P16" Point="I" />
-            <SI00 Chip="RL78F13_32pin,RL78F13_48pin,RL78F13_64pin,RL78F13_80pin" PIOR40="1" Port="P61" Point="I" />
             <SCK00 Chip="RL78F13_32pin,RL78F13_48pin,RL78F13_64pin,RL78F13_80pin" PIOR40="0" RealName="_SCK00" Port="P17" Point="I/O" />
-            <SCK00 Chip="RL78F13_32pin,RL78F13_48pin,RL78F13_64pin,RL78F13_80pin" PIOR40="1" RealName="_SCK00" Port="P60" Point="I/O" />
             <SSI00 Chip="RL78F13_32pin,RL78F13_48pin,RL78F13_64pin,RL78F13_80pin" PIOR40="0" RealName="_SSI00" Port="P30" Point="I" />
-            <SSI00 Chip="RL78F13_32pin,RL78F13_48pin,RL78F13_64pin,RL78F13_80pin" PIOR40="1" RealName="_SSI00" Port="P63" Point="I" />
           </CSI00>
           <CSI01>
             <SO01 Chip="RL78F13_32pin,RL78F13_48pin,RL78F13_64pin,RL78F13_80pin" PIOR41="0" Port="P120" Point="O" />
@@ -384,9 +378,7 @@
           </CSI01>
           <IIC00>
             <SCL00 Chip="RL78F13_32pin,RL78F13_48pin,RL78F13_64pin,RL78F13_80pin" PIOR40="0" Port="P17" Point="O" CheckNch="true" />
-            <SCL00 Chip="RL78F13_32pin,RL78F13_48pin,RL78F13_64pin,RL78F13_80pin" PIOR40="1" Port="P60" Point="O" CheckNch="true" />
             <SDA00 Chip="RL78F13_32pin,RL78F13_48pin,RL78F13_64pin,RL78F13_80pin" PIOR40="0" Port="P16" Point="O" CheckNch="true" />
-            <SDA00 Chip="RL78F13_32pin,RL78F13_48pin,RL78F13_64pin,RL78F13_80pin" PIOR40="1" Port="P61" Point="O" CheckNch="true" />
           </IIC00>
           <IIC01>
             <SCL01 Chip="RL78F13_32pin,RL78F13_48pin,RL78F13_64pin,RL78F13_80pin" PIOR41="0" Port="P14" Point="O" CheckNch="true" />
@@ -472,14 +464,10 @@
         </TMRJ0>
         <TMRD0>
           <TRDCLK_P13_0 PIOR70="0" Port="P13" Point="I/O" UnConflict="TRDCLK_P13_1" RealName="TRDCLK0" />
-          <TRDCLK_P15_0 PIOR70="1" Port="P15" Point="I/O" UnConflict="TRDCLK_P15_1,TRDIOA1_P15_0" RealName="TRDCLK0" />
           <TRDIOA0_P13 PIOR70="0" Port="P13" Point="I/O" UnConflict="TRDCLK_P13_0" RealName="TRDIOA0" />
-          <TRDIOA0_P15 PIOR70="1" Port="P15" Point="I/O" UnConflict="TRDCLK_P15_0" RealName="TRDIOA0" />
           <TRDIOB0_P125 PIOR71="0" Port="P125" Point="I/O" RealName="TRDIOB0" />
-          <TRDIOB0_P11 Chip="RL78F13_80pin,RL78F13_64pin,RL78F13_48pin,RL78F13_32pin,RL78F13_30pin" PIOR71="1" Port="P11" Point="I/O" RealName="TRDIOB0" />
           <TRDIOC0_P14 Port="P14" Point="I/O" RealName="TRDIOC0" />
           <TRDIOD0_P120 PIOR73="0" Port="P120" Point="I/O" RealName="TRDIOD0" />
-          <TRDIOD0_P12 Chip="RL78F13_80pin,RL78F13_64pin,RL78F13_48pin,RL78F13_32pin,RL78F13_30pin" PIOR73="1" Port="P12" Point="I/O" RealName="TRDIOD0" />
           <TRDIOA1_P15_0 Port="P15" Point="I/O" UnConflict="TRDIOA1_P15" RealName="TRDIOA1" />
           <TRDIOB1_P17_0 Port="P17" Point="I/O" UnConflict="TRDIOB1_P17" RealName="TRDIOB1" />
           <TRDIOC1_P16_0 Port="P16" Point="I/O" UnConflict="TRDIOC1_P16" RealName="TRDIOC1" />
@@ -487,7 +475,6 @@
         </TMRD0>
         <TMRD1>
           <TRDCLK_P13_1 PIOR70="0" Port="P13" Point="I/O" UnConflict="TRDCLK_P13_0,TRDIOA0_P13" RealName="TRDCLK0" />
-          <TRDCLK_P15_1 PIOR70="1" Port="P15" Point="I/O" UnConflict="TRDCLK_P15_0,TRDIOA0_P15" RealName="TRDCLK0" />
           <TRDIOA1_P15 Port="P15" Point="I/O" UnConflict="TRDIOA1_P15_0" RealName="TRDIOA1" />
           <TRDIOB1_P17 Port="P17" Point="I/O" UnConflict="TRDIOB1_P17_0" RealName="TRDIOB1" />
           <TRDIOC1_P16 Port="P16" Point="I/O" UnConflict="TRDIOC1_P16_0" RealName="TRDIOC1" />
@@ -1332,26 +1319,25 @@
         <cg_security4 Name="cg_security4" Value="00" />
         <cg_option Name="cg_option" Value="04" />
         <cg_security7 Name="cg_security7" Value="00" />
-        <pior_value5 Name="pior_value5" Value="00" />
+        <pior_value5 Name="pior_value5" Value="01" />
       </GlobleUserTag>
     </TAG>
   </DIR>
   <MACRO>
-    <CGC Prepared="true" SetFlag="True" NeedRefresh="True">
+    <CGC Prepared="true" SetFlag="True" NeedRefresh="False">
       <CGC SetFlag="True" MacroName="cgc" />
     </CGC>
-    <PORT HelpID="port" Prepared="true" SetFlag="">
+    <PORT HelpID="port" Prepared="true" SetFlag="" NeedRefresh="False">
       <PORT SetFlag="" MacroName="PORT" />
     </PORT>
-    <INTC SetFlag="" HelpID="int">
+    <INTC SetFlag="" HelpID="int" NeedRefresh="False">
       <INTP Accelerate="No" MacroName="INTP" />
       <KEY Chip="RL78F13_20pin,RL78F13_30pin,RL78F13_32pin" PIOR50="1" MacroName="KEY" />
     </INTC>
-    <Serial SetFlag="" HelpID="serial">
+    <Serial SetFlag="" HelpID="serial" NeedRefresh="False">
       <SAU0 Accelerate="No" MacroName="SAU" Channel="0">
         <Channel0 UART="0" CSI="00" IIC="00" Channel="0" />
         <Channel1 Chip="RL78F13_64pin,RL78F13_80pin,RL78F13_48pin,RL78F13_32pin" PIOR41="0" UART="0" CSI="01" IIC="01" Channel="1" />
-        <Channel1 Chip="RL78F13_48pin,RL78F13_32pin" PIOR41="1" UART="0" Channel="1" />
       </SAU0>
       <SAU1 Accelerate="No" MacroName="SAU" Channel="1" PIOR42="0" Chip="groupb,R5F10BBC,R5F10BBD,R5F10BBE,R5F10BBF,R5F10BBG,groupc2">
         <Channel0 UART="1" CSI="10" IIC="10" Channel="0" />
@@ -1359,32 +1345,32 @@
       </SAU1>
       <IICA0 Accelerate="No" Chip="groupb,R5F10BBC,R5F10BBD,R5F10BBE,R5F10BBF,R5F10BBG,R5F10BGC,R5F10BGD,R5F10BGE,R5F10BGF,R5F10BGG,R5F10BLC,R5F10BLD,R5F10BLE,R5F10BLF,R5F10BLG,R5F10BME,R5F10BMF,R5F10BMG" MacroName="IICA" Channel="0" />
     </Serial>
-    <ADC SetFlag="" HelpID="adc">
+    <ADC SetFlag="" HelpID="adc" NeedRefresh="False">
       <ADC SetFlag="" MacroName="ADC" />
     </ADC>
-    <TAU SetFlag="false" HelpID="timer">
+    <TAU SetFlag="false" HelpID="timer" NeedRefresh="False">
       <TAU0 Accelerate="No" MacroName="TAU" Channel="0" ChannelNum="0,1,2,3,4,5,6,7" />
       <TAU1 Accelerate="No" Chip="groupb,groupc1,groupc2" MacroName="TAU" Channel="1" ChannelNum="0,1,2,3" />
       <TMRJ0 SetFlag="" MacroName="TMRJ" Channel="0" />
       <TMRD0 SetFlag="" MacroName="TMRD" Channel="0" />
       <TMRD1 SetFlag="" MacroName="TMRD" Channel="1" />
     </TAU>
-    <WDT Prepared="true" SetFlag="true" HelpID="watchdogtimer">
+    <WDT Prepared="true" SetFlag="true" HelpID="watchdogtimer" NeedRefresh="False">
       <WDT SetFlag="true" MacroName="WDT" />
     </WDT>
-    <RTC SetFlag="" HelpID="rtc">
+    <RTC SetFlag="" HelpID="rtc" NeedRefresh="False">
       <RTC MacroName="RTC" />
     </RTC>
-    <DTC HelpID="dtc" SetFlag="">
+    <DTC HelpID="dtc" SetFlag="" NeedRefresh="False">
       <DTC SetFlag="" />
     </DTC>
-    <LVD SetFlag="" Prepared="true">
+    <LVD SetFlag="" Prepared="true" NeedRefresh="False">
       <LVD MacroName="LVD" />
     </LVD>
   </MACRO>
   <SETTING>
     <CGC>
-      <setting name="PIN_ASSIGNMENT_FIX_SETTING" value="true" />
+      <setting name="PIN_ASSIGNMENT_FIX_SETTING" value="false" />
       <setting name="OPERATION_MODE_HS_27_55" value="false" />
       <setting name="OPERATION_MODE_HS_40_55" value="true" />
       <setting name="MAIN_CLOCK_SELECT_HIGH_SYSTEM_CLOCK" value="false" />
